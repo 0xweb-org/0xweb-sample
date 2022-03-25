@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "declaration": true,
+    "target": "es5",
+    "module": "commonjs",
+    "sourceMap": false,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "@dequanto/*": "dequanto/src/*",
+      "@dequanto-contracts/*": "dequanto/contracts/*"
+    }
+  }
+}
