@@ -1,19 +1,19 @@
-# web3m install sample
+# 0xweb install sample
 
 Here the result of [0x5f4ec3df9cbd43714fe2740f5e3616155c5b8419](https://etherscan.io/address/0x5f4ec3df9cbd43714fe2740f5e3616155c5b8419) installation.
 
 1.
 
-All classes and sources will be stored in `./web3m/{platform}/{package_path}`
+All classes and sources will be stored in `./0xweb/{platform}/{package_path}`
 
 ```bash
-$ npm i web3m -g
+$ npm i 0xweb -g
 
 # Boostrap dequanto library in cwd
-$ web3m init
+$ 0xweb init
 
 # Download sources/ABI and generate TS classes
-$ web3m install 0x5f4ec3df9cbd43714fe2740f5e3616155c5b8419 --name chainlink/oracle-eth
+$ 0xweb install 0x5f4ec3df9cbd43714fe2740f5e3616155c5b8419 --name chainlink/oracle-eth
 ```
 
 2.
