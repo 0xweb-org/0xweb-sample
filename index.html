@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <script src='/node_modules/includejs/lib/include.js'
+            data-bundler-bundle='vendor'
+            data-bundler-dependencies='ignore'
+        ></script>
+
+        <script>
+            (function () {
+
+
+
+                include
+                    .cfg('commonjs', true)
+                    .cfg('amd', true)
+                    .cfg('extentionDefault', {
+                        js: 'ts'
+                    })
+                    .cfg('base', '/')
+                    .cfg('map', {
+                        'atma-formatter': '/node_modules/atma-formatter/lib/format.min.js',
+                        'atma-utils': '/node_modules/atma-utils/lib/utils.js',
+                        'atma-class': '/node_modules/atma-class/lib/class.js',
+                        'class-json': '/node_modules/class-json/lib/class-json.js',
+                        'alot': '/node_modules/alot/lib/alot.js',
+                        'memd': '/node_modules/memd/lib/memd.js',
+                        'a-di': '/node_modules/a-di/lib/di.js',
+                        'axios': '/node_modules/axios/dist/axios.min.js',
+                        'papaparse': '/node_modules/papaparse/papaparse.js',
+                        'copy-text-to-clipboard': '/node_modules/copy-text-to-clipboard/index.js',
+                        'socket.io-client': '/node_modules/socket.io-client/dist/socket.io.js',
+                        'sweetalert': '/node_modules/sweetalert/dist/sweetalert.min.js',
+                        'perfect-scrollbar': '/node_modules/perfect-scrollbar/dist/perfect-scrollbar.js',
+                    })
+                    .cfg('map', {
+                        '@ethersproject/abi': '/node_modules/@ethersproject/abi/lib/index.js',
+                        'everlog': '/node_modules/everlog/lib/index.js',
+                        "ethers": "/node_modules/ethers/dist/ethers.umd.js",
+                        "web3": "/node_modules/web3/dist/web3.min.js",
+                    })
+                    .routes({
+                        "@core": "/src/{0}",
+                        "@plug" : "/plug/{0}",
+                        "@www" : "/www/{0}",
+                        "@utils" : "/src/utils/{0}",
+                        "@services" : "/src/services/{0}",
+                        "@db" : "/db-manual/{0}",
+                        '@controls': "/www/controls/{0}",
+                        "@mdc" : "/www/controls/mdc/{0}",
+                        "@compos" : "/www/compos/{0}",
+                        "@dequanto": "/dequanto/src/{0}",
+                         "@0xweb": "/0xweb/{0}",
+                    });
+
+
+            }());
+        </script>
+        Foo
+        <script src='/www/main.ts'></script>
+
+    </body>
+</html>

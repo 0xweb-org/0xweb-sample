@@ -11,7 +11,8 @@
         },
         "routes": {
           "@core": "src/{0}",
-          "@dequanto": "dequanto/src/{0}"
+          "@dequanto": "dequanto/src/{0}",
+          "@0xweb": "0xweb/{0}"
         }
       },
       "atma-loader-ts": {
@@ -36,7 +37,6 @@
     "appcfg": "^0.4.63",
     "atma": "^0.15.12",
     "atma-io": "^1.2.59",
-    "atma-loader-ts": "^1.1.18",
     "atma-utils": "^0.2.51",
     "axios": "^0.21.1",
     "bcrypt": "^5.0.1",
@@ -48,5 +48,9 @@
     "web3": "^1.6.0",
     "web3-core": "^1.6.0",
     "web3-core-subscriptions": "^1.6.0"
+  },
+  "devDependencies": {
+    "atma-loader-ts": "^1.1.18",
+    "includejs": "^0.16.4"
   }
 }

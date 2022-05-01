@@ -4,10 +4,8 @@
  */
 import di from 'a-di';
 import { TAddress } from '@dequanto/models/TAddress';
-import { TBufferLike } from '@dequanto/models/TBufferLike';
 import { ClientEventsStream } from '@dequanto/clients/ClientEventsStream';
 import { ContractBase } from '@dequanto/contracts/ContractBase';
-import { AbiItem } from 'web3-utils';
 import { TransactionReceipt } from 'web3-core';
 import { EventData } from 'web3-eth-contract';
 import { TxWriter } from '@dequanto/txs/TxWriter';
@@ -19,7 +17,11 @@ import { EthWeb3Client } from '@dequanto/clients/EthWeb3Client'
 export class ChainlinkOracleEth extends ContractBase {
     constructor(
         public address: TAddress = '0x5f4ec3df9cbd43714fe2740f5e3616155c5b8419',
-        public client: Web3Client = di.resolve(EthWeb3Client),
+        public client: Web3Client = di.resolve(EthWeb3Client, {
+            endpoints: [
+                { url: 'https://mainnet.infura.io/v3/ffcf460be81c4282ad05b80583fa20bf' }
+            ]
+        }),
         public explorer: IBlockChainExplorer = di.resolve(Etherscan)
     ) {
         super(address, client, explorer)

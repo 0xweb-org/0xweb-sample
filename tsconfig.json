@@ -9,8 +9,9 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "paths": {
-      "@dequanto/*": "dequanto/src/*",
-      "@dequanto-contracts/*": "dequanto/contracts/*"
+      "@dequanto/*": ["dequanto/src/*"],
+      "@0xweb/*": ["0xweb/*"],
+      "@dequanto-contracts/*": ["dequanto/contracts/*"]
     }
   }
 }
