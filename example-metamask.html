@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <script src='/node_modules/includejs/lib/include.js'></script>
+
+        <script>
+
+            include
+                .cfg('commonjs', true)
+                .cfg('amd', true)
+                .cfg('extentionDefault', {
+                    js: 'ts'
+                })
+                .cfg('base', '/')
+                .cfg('map', {
+                    'a-di': '/node_modules/a-di/lib/di.js',
+                    'alot': '/node_modules/alot/lib/alot.js',
+                    'memd': '/node_modules/memd/lib/memd.js',
+                    'atma-utils': '/node_modules/atma-utils/lib/utils.js',
+                    'class-json': '/node_modules/class-json/lib/class-json.js',
+
+                    'axios': '/node_modules/axios/dist/axios.min.js',
+
+                    'everlog': '/node_modules/everlog/lib/everlog-browser.js',
+                    'atma-io': '/node_modules/atma-io/lib/io-browser.js',
+                    'appcfg': '/node_modules/appcfg/lib/appcfg-browser.js',
+                    "ethers": "/node_modules/ethers/dist/ethers.umd.js",
+                    "web3": "/node_modules/web3/dist/web3.min.js",
+                })
+                .routes({
+                    "@dequanto": "/dequanto/src/{0}",
+                    "@0xweb": "/0xweb/{0}",
+                });
+
+        </script>
+
+        Open the DevTools to see the output
+        <script src='/www/main.ts'></script>
+
+    </body>
+</html>

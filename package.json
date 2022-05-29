@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "server": "atma server"
+  },
   "atma": {
     "plugins": [
       "atma-loader-ts"
@@ -36,13 +39,13 @@
     "alot": "^0.2.96",
     "appcfg": "^0.4.63",
     "atma": "^0.15.12",
-    "atma-io": "^1.2.59",
+    "atma-io": "^1.2.62",
     "atma-utils": "^0.2.51",
     "axios": "^0.21.1",
     "bcrypt": "^5.0.1",
     "ethers": "^5.5.1",
-    "everlog": "^1.0.8",
-    "memd": "^0.3.10",
+    "everlog": "^1.0.11",
+    "memd": "^0.3.11",
     "papaparse": "^5.3.1",
     "ts-nameof": "^5.0.0",
     "web3": "^1.6.0",
@@ -51,6 +54,6 @@
   },
   "devDependencies": {
     "atma-loader-ts": "^1.1.18",
-    "includejs": "^0.16.4"
+    "includejs": "^0.16.6"
   }
 }
