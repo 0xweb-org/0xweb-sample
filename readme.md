@@ -13,7 +13,7 @@ $ npm i 0xweb -g
 $ 0xweb init
 
 # Download sources/ABI and generate TS classes
-$ 0xweb install 0x5f4ec3df9cbd43714fe2740f5e3616155c5b8419 --name chainlink/oracle-eth
+$ 0xweb install 0x5f4ec3df9cbd43714fe2740f5e3616155c5b8419 --name chainlink/oracle-eth --chain eth
 ```
 
 ✨ Generated class: [oracle-eth.ts](./0xweb/eth/chainlink/oracle-eth/oracle-eth.ts)

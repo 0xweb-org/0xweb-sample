@@ -53,7 +53,8 @@
     "web3-core-subscriptions": "^1.6.0"
   },
   "devDependencies": {
+    "0xweb": "^0.9.28",
     "atma-loader-ts": "^1.1.18",
-    "includejs": "^0.16.6"
+    "includejs": "^0.16.7"
   }
 }

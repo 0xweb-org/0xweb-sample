@@ -1,9 +1,10 @@
 /**
- *  AUTO-Generated Class: 2022-05-30 01:02
+ *  AUTO-Generated Class: 2022-06-29 22:18
  *  Implementation: https://etherscan.io/address/0x5f4ec3df9cbd43714fe2740f5e3616155c5b8419#code
  */
 import di from 'a-di';
 import { TAddress } from '@dequanto/models/TAddress';
+import { TAccount } from '@dequanto/models/TAccount';
 import { TBufferLike } from '@dequanto/models/TBufferLike';
 import { ClientEventsStream } from '@dequanto/clients/ClientEventsStream';
 import { ContractBase } from '@dequanto/contracts/ContractBase';
@@ -26,8 +27,8 @@ export class ChainlinkOracleEth extends ContractBase {
     }
 
     // 0x79ba5097
-    async acceptOwnership (eoa: TAccount, ): Promise<TxWriter> {
-        return this.$write(this.$getAbiItem('function', 'acceptOwnership'), eoa);
+    async acceptOwnership (sender: TSender, ): Promise<TxWriter> {
+        return this.$write(this.$getAbiItem('function', 'acceptOwnership'), sender);
     }
 
     // 0xbc43cbaf
@@ -41,8 +42,8 @@ export class ChainlinkOracleEth extends ContractBase {
     }
 
     // 0xa928c096
-    async confirmAggregator (eoa: TAccount, _aggregator: TAddress): Promise<TxWriter> {
-        return this.$write(this.$getAbiItem('function', 'confirmAggregator'), eoa, _aggregator);
+    async confirmAggregator (sender: TSender, _aggregator: TAddress): Promise<TxWriter> {
+        return this.$write(this.$getAbiItem('function', 'confirmAggregator'), sender, _aggregator);
     }
 
     // 0x313ce567
@@ -106,8 +107,8 @@ export class ChainlinkOracleEth extends ContractBase {
     }
 
     // 0xf8a2abd3
-    async proposeAggregator (eoa: TAccount, _aggregator: TAddress): Promise<TxWriter> {
-        return this.$write(this.$getAbiItem('function', 'proposeAggregator'), eoa, _aggregator);
+    async proposeAggregator (sender: TSender, _aggregator: TAddress): Promise<TxWriter> {
+        return this.$write(this.$getAbiItem('function', 'proposeAggregator'), sender, _aggregator);
     }
 
     // 0xe8c4be30
@@ -126,13 +127,13 @@ export class ChainlinkOracleEth extends ContractBase {
     }
 
     // 0x92eefe9b
-    async setController (eoa: TAccount, _accessController: TAddress): Promise<TxWriter> {
-        return this.$write(this.$getAbiItem('function', 'setController'), eoa, _accessController);
+    async setController (sender: TSender, _accessController: TAddress): Promise<TxWriter> {
+        return this.$write(this.$getAbiItem('function', 'setController'), sender, _accessController);
     }
 
     // 0xf2fde38b
-    async transferOwnership (eoa: TAccount, _to: TAddress): Promise<TxWriter> {
-        return this.$write(this.$getAbiItem('function', 'transferOwnership'), eoa, _to);
+    async transferOwnership (sender: TSender, _to: TAddress): Promise<TxWriter> {
+        return this.$write(this.$getAbiItem('function', 'transferOwnership'), sender, _to);
     }
 
     // 0x54fd4d50
@@ -239,10 +240,7 @@ export class ChainlinkOracleEth extends ContractBase {
     abi = [{"inputs":[{"internalType":"address","name":"_aggregator","type":"address"},{"internalType":"address","name":"_accessController","type":"address"}],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"int256","name":"current","type":"int256"},{"indexed":true,"internalType":"uint256","name":"roundId","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"updatedAt","type":"uint256"}],"name":"AnswerUpdated","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"uint256","name":"roundId","type":"uint256"},{"indexed":true,"internalType":"address","name":"startedBy","type":"address"},{"indexed":false,"internalType":"uint256","name":"startedAt","type":"uint256"}],"name":"NewRound","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"from","type":"address"},{"indexed":true,"internalType":"address","name":"to","type":"address"}],"name":"OwnershipTransferRequested","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"from","type":"address"},{"indexed":true,"internalType":"address","name":"to","type":"address"}],"name":"OwnershipTransferred","type":"event"},{"inputs":[],"name":"acceptOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"accessController","outputs":[{"internalType":"contract AccessControllerInterface","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"aggregator","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_aggregator","type":"address"}],"name":"confirmAggregator","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"decimals","outputs":[{"internalType":"uint8","name":"","type":"uint8"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"description","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"_roundId","type":"uint256"}],"name":"getAnswer","outputs":[{"internalType":"int256","name":"","type":"int256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint80","name":"_roundId","type":"uint80"}],"name":"getRoundData","outputs":[{"internalType":"uint80","name":"roundId","type":"uint80"},{"internalType":"int256","name":"answer","type":"int256"},{"internalType":"uint256","name":"startedAt","type":"uint256"},{"internalType":"uint256","name":"updatedAt","type":"uint256"},{"internalType":"uint80","name":"answeredInRound","type":"uint80"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"_roundId","type":"uint256"}],"name":"getTimestamp","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"latestAnswer","outputs":[{"internalType":"int256","name":"","type":"int256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"latestRound","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"latestRoundData","outputs":[{"internalType":"uint80","name":"roundId","type":"uint80"},{"internalType":"int256","name":"answer","type":"int256"},{"internalType":"uint256","name":"startedAt","type":"uint256"},{"internalType":"uint256","name":"updatedAt","type":"uint256"},{"internalType":"uint80","name":"answeredInRound","type":"uint80"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"latestTimestamp","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"owner","outputs":[{"internalType":"address payable","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint16","name":"","type":"uint16"}],"name":"phaseAggregators","outputs":[{"internalType":"contract AggregatorV2V3Interface","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"phaseId","outputs":[{"internalType":"uint16","name":"","type":"uint16"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_aggregator","type":"address"}],"name":"proposeAggregator","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"proposedAggregator","outputs":[{"internalType":"contract AggregatorV2V3Interface","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint80","name":"_roundId","type":"uint80"}],"name":"proposedGetRoundData","outputs":[{"internalType":"uint80","name":"roundId","type":"uint80"},{"internalType":"int256","name":"answer","type":"int256"},{"internalType":"uint256","name":"startedAt","type":"uint256"},{"internalType":"uint256","name":"updatedAt","type":"uint256"},{"internalType":"uint80","name":"answeredInRound","type":"uint80"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"proposedLatestRoundData","outputs":[{"internalType":"uint80","name":"roundId","type":"uint80"},{"internalType":"int256","name":"answer","type":"int256"},{"internalType":"uint256","name":"startedAt","type":"uint256"},{"internalType":"uint256","name":"updatedAt","type":"uint256"},{"internalType":"uint80","name":"answeredInRound","type":"uint80"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_accessController","type":"address"}],"name":"setController","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"_to","type":"address"}],"name":"transferOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"version","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"}]
 }
 
-type TAccount = string | {
-    address?: TAddress,
-    key?: string,
-    name?: string,
+type TSender = TAccount & {
     value?: string | number | bigint
 }
 
